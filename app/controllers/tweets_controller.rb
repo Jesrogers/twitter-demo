@@ -19,6 +19,7 @@ class TweetsController < ApplicationController
 
   # GET /tweets/1/edit
   def edit
+    @tweet = current_user.tweets.find(params[:id])
   end
 
   # POST /tweets or /tweets.json
